@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/SearchBar.css'
 
 class SearchBar extends React.Component {
   render() {
@@ -13,9 +14,9 @@ class SearchBar extends React.Component {
     } = this.props;
 
     return (
-      <form>
+      <form className='search-form'>
         <label htmlFor="searchText">
-          Inclui o texto:
+          Pesquisa por texto:
           <input
             type="text"
             value={ searchText }
@@ -24,7 +25,7 @@ class SearchBar extends React.Component {
           />
         </label>
         <label htmlFor="bookmarked">
-          Mostrar somente favoritos
+          Mostrar favoritos
           <input
             type="checkbox"
             checked={ bookmarkedOnly }
