@@ -1,6 +1,10 @@
 # Project Movie Cards Library Stateful!🎬​
 This project was developed with a focus on learning how to use stateful components in React.
 
+React.js application of a movie library, where it is possible to filter, search, filter, and add new movies.
+
+![](/public/images/project.gif)
+
 ---
 
 ## About the project
