@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/AddMovie.css'
 
 class AddMovie extends React.Component {
   constructor() {
@@ -49,20 +50,10 @@ class AddMovie extends React.Component {
     );
   }
 
-  createTextarea = (value, name) => {
-    return (
-      <textarea
-        value={ value }
-        onChange={ this.handleChange }
-        name={ name }
-      />
-    );
-  }
-
   render() {
     const { title, subtitle, imagePath, storyline, rating, genre } = this.state;
     return (
-      <form>
+      <form className='form-add-movie'>
         <label htmlFor="titulo">
           Título
           {this.createInput(title, 'title', 'text')}
@@ -77,7 +68,11 @@ class AddMovie extends React.Component {
         </label>
         <label htmlFor="sinopse">
           Sinopse
-          {this.createTextarea(storyline, 'storyline', 'text')}
+          <textarea
+            value={ storyline }
+            onChange={ this.handleChange }
+            name='storyline'
+          />
         </label>
         <label htmlFor="rating">
           Avaliação
@@ -95,7 +90,7 @@ class AddMovie extends React.Component {
             <option value="thriller">Suspense</option>
           </select>
         </label>
-        <button type="submit" onClick={ this.handleClick }>
+        <button type="submit" onClick={ this.handleClick } className='button-add'>
           Adicionar filme
         </button>
       </form>
