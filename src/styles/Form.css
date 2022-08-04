@@ -1,0 +1,10 @@
+h2 {
+  background-color: rgb(126, 126, 126);
+  color: black;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding: 2%;
+  border-radius: 10px;
+  margin-bottom: 0;
+  font-size: large;
+}
